@@ -1,0 +1,24 @@
+"Welcome To Address Book Service MySQL and ER Diagram Program"
+
+mysql> #UC1 Ability to create a Address Book Service DB
+mysql> create database AddressBook_Services;
+Query OK, 1 row affected (0.16 sec)
+
+mysql> show databases;
++----------------------+
+| Database             |
++----------------------+
+| addressbook_services |
+| addressbookservice   |
+| employeepayroll      |
+| emppayroll_services  |
+| example              |
+| information_schema   |
+| mysql                |
+| payroll_services     |
+| performance_schema   |
+| sakila               |
+| sys                  |
+| world                |
++----------------------+
+12 rows in set (0.00 sec)
