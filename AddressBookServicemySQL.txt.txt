@@ -44,3 +44,22 @@ mysql>  describe addressbook;
 | zip          | mediumtext  | NO   |     | NULL    |       |
 +--------------+-------------+------+-----+---------+-------+
 7 rows in set (0.00 sec)
+
+
+mysql> #UC3 Ability to insert new Contacts to Address Book
+mysql>  INSERT INTO addressbook(firstName,lastName,mobileNumber,email,city,state,zip) VALUES
+    ->  ('Bhuwan','Arya','7454712563','abc@gmail.com','Almora','Uttarakhand',263132),
+    -> ('Nikhil','Patil','9854712563','abc@gmail.com','Haldwani','Uttarakhand',263126),
+    ->  ('Rahul','Prakash','7954712564','abc@gmail.com','Haridwar','Uttarakhand',243152);
+Query OK, 3 rows affected (0.06 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from addressbook;
++-----------+----------+--------------+---------------+----------+-------------+--------+
+| firstName | lastName | mobileNumber | email         | city     | state       | zip    |
++-----------+----------+--------------+---------------+----------+-------------+--------+
+| Bhuwan    | Arya     | 7454712563   | abc@gmail.com | Almora   | Uttarakhand | 263132 |
+| Nikhil    | Patil    | 9854712563   | abc@gmail.com | Haldwani | Uttarakhand | 263126 |
+| Rahul     | Prakash  | 7954712564   | abc@gmail.com | Haridwar | Uttarakhand | 243152 |
++-----------+----------+--------------+---------------+----------+-------------+--------+
+3 rows in set (0.00 sec)
