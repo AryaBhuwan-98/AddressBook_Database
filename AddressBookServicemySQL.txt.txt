@@ -148,7 +148,18 @@ mysql> SELECT state,COUNT(state) as count from addressBook group by state;
 +-------------+-------+
 2 rows in set (0.00 sec)
 
-
+mysql>  #UC8 Ability to retrieve entries sorted alphabetically by Person’s name for a given city
+mysql>
+mysql>  select * from addressbook
+    -> ORDER BY firstName, lastName;
++-----------+----------+--------------+---------------+-----------+-------------+--------+
+| firstName | lastName | mobileNumber | email         | city      | state       | zip    |
++-----------+----------+--------------+---------------+-----------+-------------+--------+
+| Deepak    | Mishra   | 9854712563   | abc@gmail.com | Bangalore | Karnataka   | 263148 |
+| Nikhil    | Patil    | 9854712563   | abc@gmail.com | Haldwani  | Uttarakhand | 263126 |
+| Rahul     | Prakash  | 7954712564   | abc@gmail.com | Haridwar  | Uttarakhand | 243152 |
++-----------+----------+--------------+---------------+-----------+-------------+--------+
+3 rows in set (0.00 sec)
 
 
 
