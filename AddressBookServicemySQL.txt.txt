@@ -252,4 +252,41 @@ mysql> select type, Count(type) from addressBook group by type;
 +------------+-------------+
 3 rows in set (0.00 sec)
 
+mysql>  #UC11 Ability to add person to both Friend and Family
+mysql>
+mysql> INSERT INTO addressbook(firstName,lastName,type,mobileNumber,email,city,state,zip) VALUES
+    -> ('Nitin','Rathore','Family','9632105478','xyz@yahoo.com','Mumbai','UttarPradesh',400011);
+Query OK, 1 row affected (0.05 sec)
+
+mysql> INSERT INTO addressbook(firstName,lastName,type,mobileNumber,email,city,state,zip) VALUES
+    -> ('Dalveer','Singh','Friend','9856321478','abc@yahoo.com','Pune','Maharashtra',411027);UES
+Query OK, 1 row affected (0.05 sec)
+
+    -> select * from addressbook;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'UES
+select * from addressbook' at line 1
+mysql> select * from addressbook;
++-----------+----------+------------+--------------+---------------+-----------+--------------+--------+
+| firstName | lastName | type       | mobileNumber | email         | city      | state        | zip    |
++-----------+----------+------------+--------------+---------------+-----------+--------------+--------+
+| Dalveer   | Singh    | Friend     | 9856321478   | abc@yahoo.com | Pune      | Maharashtra  | 411027 |
+| Deepak    | Mishra   | Family     | 9854712563   | abc@gmail.com | Bangalore | Karnataka    | 263148 |
+| Nikhil    | Patil    | Profession | 9854712563   | abc@gmail.com | Haldwani  | Uttarakhand  | 263126 |
+| Nitin     | Rathore  | Family     | 9632105478   | xyz@yahoo.com | Mumbai    | UttarPradesh | 400011 |
+| Rahul     | Prakash  | Friend     | 7954712564   | abc@gmail.com | Haridwar  | Uttarakhand  | 243152 |
++-----------+----------+------------+--------------+---------------+-----------+--------------+--------+
+5 rows in set (0.00 sec)
+
+ 
+
+
+
+
+
+
+
+
+
+
+
 
